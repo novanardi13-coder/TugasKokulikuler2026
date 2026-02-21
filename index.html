@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Halaman - 1</title>
+  <style>
+    body {
+      padding: 0px;
+    }
+    
+    .J1 {
+      background: deepskyblue;
+      border-radius: 10px;
+      font-size: 13px;
+      text-align: center;
+      padding: 10px;
+      width: 80vw;
+      transform: translateX(18px);
+      margin-bottom: 10px;
+    }
+    
+    .n3 p {
+      margin: 0px 0;
+    }
+    
+    #message {
+    position: relative;
+    padding: 20px 40px 20px 20px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 10px;
+    display: none;
+    font-size: 18px;
+    text-align: center;
+    }
+    
+    #closeBtn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #ff4d4d;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="J1">1. PENDIDIKAN AGAMA ISLAM & BUDI PAKERTI</h1>
+  <div>
+    <p>1. lokasi : candi prambanan</p>
+    <p>2. hal yang menambah keimanan:</p>
+    <p>Mengagumi kebesaran Allah SWT yang telah menganugerahkan manusia akal dan kemampuan luar biasa sehingga mampu membangun Peradaban yang Indah dan megah.</p>
+    <div class="n3">
+      <p>3. 4 kitab allah dan nabi penerimnya:</p>
+      <p>• taurat : Nabi Musa a.s.</p>
+      <p>• zabur : Nabi Daud a.s.</p>
+      <p>• Injil : Nabi Isa a.s.</p>
+      <p>• Al-Qur'an : Nabi Muhammad S.A.W.</p>
+    </div>
+    <p>4. Nilai kitab allah yang ditemukan:</p>
+    <p>Milai toleransi serta menghargai sejarah. Al-Qur'an mengajar. kan kita untuk mengambil hikmah dari umat terdahulu dan tetap menghormati Perbedaan keyakinan davam kehidupan bermasyarakat.</p>
+    <div class="n3">
+      <p>Refleksi:</p>
+      <p>• Kesan: Sangat kagum terhadap keindahan arsitektur dan nilai Sejarahnya.</p>
+      <p>• Pelajaran. Penting untuk menjaga warisan budaya serta meningkatkan rasa syukur atas kecerdasan yang Allah berikan.</p>
+    </div>
+  </div>
+  
+  <div id="message">
+    <button onclick="NP1()">Next page</button>
+    <button id="closeBtn">X</button>
+  </div>
+  
+  <script>
+  let tapCount = 0;
+  let tapTimeout;
+  
+  function NP1() {
+    window.location.href="PPKN.html";
+  }
+  
+  document.body.addEventListener('click', (e) => {
+    if(e.target.id === 'closeBtn') return;
+    
+    tapCount++;
+    
+    clearTimeout(tapTimeout);
+    tapTimeout = setTimeout(() => {
+    tapCount = 0;
+  }, 1000);
+  
+  if (tapCount === 3) {
+    document.getElementById('message').style.display = 'block';
+    tapCount = 0;
+  }
+  });
+  
+  document.getElementById('closeBtn').addEventListener('click', () => {
+  document.getElementById('message').style.display = 'none';
+  });
+</script>
+</body>
+
+</html>

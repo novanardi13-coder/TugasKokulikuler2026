@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Halaman - 8</title>
+  <style>
+    body {
+      text-align: center;
+    }
+    
+    h1 {
+      background: deepskyblue;
+      border-radius: 10px;
+      font-size: 12.2px;
+      text-align: center;
+      padding: 10px;
+      width: 80vw;
+      transform: translateX(18px);
+      margin-bottom: 10px;
+    }
+    
+    h2 {
+      font-size: 70px;
+      text-align: left;
+    }
+    
+    .isi {
+      transform: translateY(-565px) translateX(40px);
+      text-align: left;
+    }
+    
+    .isi1 {
+      transform: translateY(-520px) translateX(40px);
+      text-align: left;
+    }
+    
+    .isi2 {
+      transform: translateY(-475px) translateX(40px);
+      text-align: left;
+    }
+    
+    .isi3 {
+      transform: translateY(-410px) translateX(40px);
+      text-align: left;
+    }
+    
+    #message {
+    position: relative;
+    padding: 20px 40px 20px 20px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 10px;
+    display: none;
+    font-size: 18px;
+    text-align: center;
+    transform: translateY(-400px) translateX(-39px);
+    }
+    
+    #closeBtn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #ff4d4d;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>8. PENDIDIKAN JASMANI OLAHRAGA & KESEHATAN</h1>
+  <h2>1</h2>
+  <h2>2</h2>
+  <h2>3</h2>
+  <h2>4</h2>
+  <div class="isi">
+    <div>1. barang barang pribadi</div>
+    <div>2. obat obatan yang dibutuhkan</div>
+    <div>3. kebugaran tubuh</div>
+    <div>4. tugas yang dikerjakan </div>
+    <div>5. rencana kegiatan</div>
+  </div>
+  
+  <div class="isi1">
+    <div>1. mewakili untuk semua hal</div>
+    <div>2. memimpin kelompok dengan baik</div>
+    <div>3. bertanggung jawab atas anggota</div>
+    <div>4. mengkoordinasikan tugas anggota</div>
+    <div>5. mengambil keputusan yang benar</div>
+  </div>
+  
+  <div class="isi2">
+    <div>• saat beraktivitas tubuh terasa masih <div>bugar dan sehat walaupun terasa lelah</div></div>
+    <div>• setelah selesai berkegiatan tubuh terasa sangat lelah, badan sakit sakit dan agak<div> lemas</div></div>
+  </div>
+  
+  <div class="isi3">
+    <div>memberinya tisu dan obat mabuk serta <div>memijat punggung nya agar tubuhnya <div>membaik</div>
+  </div>
+  
+  <div id="message">
+    <button onclick="NP1()">Next page</button>
+    <button id="closeBtn">X</button>
+  </div>
+  
+<script>
+  let tapCount = 0;
+  let tapTimeout;
+  
+  function NP1() {
+    window.location.href="IT.html";
+  }
+  
+  document.body.addEventListener('click', (e) => {
+    if(e.target.id === 'closeBtn') return;
+    
+    tapCount++;
+    
+    clearTimeout(tapTimeout);
+    tapTimeout = setTimeout(() => {
+    tapCount = 0;
+  }, 1000);
+  
+  if (tapCount === 3) {
+    document.getElementById('message').style.display = 'block';
+    tapCount = 0;
+  }
+  });
+  
+  document.getElementById('closeBtn').addEventListener('click', () => {
+  document.getElementById('message').style.display = 'none';
+  });
+</script>
+</body>
+
+</html>

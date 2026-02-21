@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Tajwid Al-Kautsar · HP</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: #d7e3f0;
+            font-family: 'Segoe UI', 'Arial', 'Helvetica', sans-serif;
+            padding: 10px;
+            min-height: 100vh;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        .kotak {
+            max-width: 480px;  /* kaya HP ukuran umum */
+            width: 100%;
+            background: white;
+            border-radius: 28px 28px 24px 24px;
+            box-shadow: 0 12px 30px rgba(0, 20, 40, 0.25);
+            overflow: hidden;
+            padding: 0 0 20px 0;
+        }
+        .header {
+            background: linear-gradient(165deg, #0e3b58, #154c6e);
+            color: white;
+            padding: 22px 16px 18px 16px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 1.7rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+        .header p {
+            font-size: 1rem;
+            opacity: 0.9;
+            background: #256f96;
+            display: inline-block;
+            padding: 5px 20px;
+            border-radius: 40px;
+            margin-top: 8px;
+        }
+        .arab-ayat {
+            background: #f8f3e7;
+            padding: 24px 12px 16px 12px;
+            text-align: center;
+            border-bottom: 2px solid #bed4ec;
+        }
+        .arab-besar {
+            font-size: 3rem;
+            font-family: 'Traditional Arabic', 'Amiri', 'Scheherazade', 'Arial', serif;
+            line-height: 1.6;
+            color: #02202b;
+            word-break: break-word;
+        }
+        .latin-kecil {
+            font-size: 1.2rem;
+            color: #1f5375;
+            font-style: italic;
+            margin-top: 8px;
+            background: #e1ecf9;
+            padding: 8px 12px;
+            border-radius: 40px;
+            display: inline-block;
+        }
+        .arti {
+            background: #e1edfa;
+            padding: 12px 12px;
+            font-size: 1.1rem;
+            color: #043753;
+            font-weight: 500;
+            border-bottom: 1px solid #b3c9e2;
+        }
+        /* tabel di-HP  dibuat card biar gak kaku */
+        .tabel-container {
+            padding: 8px 10px 10px 10px;
+        }
+        .row-tajwid {
+            background: #f4f9ff;
+            border-radius: 24px;
+            margin-bottom: 14px;
+            padding: 12px 14px;
+            border: 1px solid #c1d9f0;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.02);
+        }
+        .nomor-badge {
+            background: #1b5e8a;
+            color: white;
+            font-weight: bold;
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 30px;
+            font-size: 1rem;
+            margin-right: 10px;
+        }
+        .lafaz-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            border-bottom: 1px dashed #b9d2ed;
+            padding-bottom: 8px;
+        }
+        .lafaz-arab {
+            font-size: 2.2rem;
+            font-family: 'Traditional Arabic', 'Amiri', serif;
+            color: #0d3146;
+            line-height: 1.2;
+            flex: 1;
+            text-align: right;
+            padding-left: 5px;
+        }
+        .hukum-row {
+            font-weight: 700;
+            color: #003057;
+            font-size: 1.2rem;
+            margin: 6px 0 4px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .hukum-label {
+            background: #bbd6f0;
+            padding: 5px 14px;
+            border-radius: 30px;
+            font-size: 1rem;
+        }
+        .penjelasan-row {
+            color: #143e5c;
+            font-size: 1rem;
+            line-height: 1.45;
+            margin-top: 6px;
+            padding-left: 6px;
+            border-left: 4px solid #2e7eb0;
+            padding-right: 2px;
+        }
+        .catatan-hp {
+            background: #fcf2db;
+            margin: 18px 12px 10px 12px;
+            padding: 16px 16px;
+            border-radius: 26px;
+            border-left: 7px solid #ae7b2c;
+            font-size: 0.98rem;
+            color: #1e3f54;
+        }
+        .footer-hp {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #62819c;
+            margin-top: 12px;
+        }
+        hr {
+            border: 1px solid #c8daf0;
+            margin: 16px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="kotak">
+    <div class="header">
+        <h1>🔖 Al-Kautsar: 3</h1>
+        <p>tajwid · BTQ & Jawa</p>
+    </div>
+
+    <div class="arab-ayat">
+        <div class="arab-besar">إِنَّ شَانِئَكَ هُوَ ٱلْأَبْتَرُ</div>
+        <div class="latin-kecil">inna shāni`aka huwal abtar</div>
+    </div>
+    <div class="arti">
+        ⚡ "Sungguh, orang yang membencimu dialah yang terputus"
+    </div>
+
+    <div class="tabel-container">
+        <!-- 1. إِنَّ -->
+        <div class="row-tajwid">
+            <div class="lafaz-row">
+                <span class="nomor-badge">1</span>
+                <span class="lafaz-arab">إِنَّ</span>
+            </div>
+            <div class="hukum-row">
+                <span class="hukum-label">Ghunnah Musyaddah</span>
+            </div>
+            <div class="penjelasan-row">
+                Nun bertasydid (نّ). Dibaca dengung 2 harakat, tahan suara ing rong irung.
+            </div>
+        </div>
+
+        <!-- 2. شَا -->
+        <div class="row-tajwid">
+            <div class="lafaz-row">
+                <span class="nomor-badge">2</span>
+                <span class="lafaz-arab">شَا</span>
+            </div>
+            <div class="hukum-row">
+                <span class="hukum-label">Mad Thabi‘i</span>
+            </div>
+            <div class="penjelasan-row">
+                Fathah diikuti alif (شَا). Dibaca panjang 2 harakat (mad asli).
+            </div>
+        </div>
+
+        <!-- 3. نِئَ  (nun kasrah + hamzah) -->
+        <div class="row-tajwid">
+            <div class="lafaz-row">
+                <span class="nomor-badge">3</span>
+                <span class="lafaz-arab">نِئَ</span>
+            </div>
+            <div class="hukum-row">
+                <span class="hukum-label">– (bukan hukum nun sukun)</span>
+            </div>
+            <div class="penjelasan-row">
+                Nun kasrah ketemu hamzah — dudu nun sukun, mula diwaca biasa tanpa dengung.
+            </div>
+        </div>
+
+        <!-- 4. الْأَ -->
+        <div class="row-tajwid">
+            <div class="lafaz-row">
+                <span class="nomor-badge">4</span>
+                <span class="lafaz-arab">ٱلْأَ</span>
+            </div>
+            <div class="hukum-row">
+                <span class="hukum-label">Alif Lam Qamariyah</span>
+            </div>
+            <div class="penjelasan-row">
+                Lam ta'rif (ال) ketemu hamzah (أ) — lam dibaca cetha (ora dengung).
+            </div>
+        </div>
+
+        <!-- 5. بْتَ -->
+        <div class="row-tajwid">
+            <div class="lafaz-row">
+                <span class="nomor-badge">5</span>
+                <span class="lafaz-arab">بْتَ</span>
+            </div>
+            <div class="hukum-row">
+                <span class="hukum-label">Qalqalah Sugra</span>
+            </div>
+            <div class="penjelasan-row">
+                Ba' sukun (بْ) ing tengah kalimat. Dipantulkan tipis.
+            </div>
+        </div>
+
+        <!-- 6. رُ (waqaf) -->
+        <div class="row-tajwid">
+            <div class="lafaz-row">
+                <span class="nomor-badge">6</span>
+                <span class="lafaz-arab">رُ (waqaf)</span>
+            </div>
+            <div class="hukum-row">
+                <span class="hukum-label">Mad ‘Aridh lissukun</span>
+            </div>
+            <div class="penjelasan-row">
+                Nek mandheg (waqaf) ing akhir ayat, huruf ro' diwaca dawa 2, 4 utawa 6 harakat.
+            </div>
+        </div>
+    </div>
+
+    <!-- catatan tambahan khas HP -->
+    <div class="catatan-hp">
+        <span style="font-size: 1.3rem; display: block; margin-bottom: 5px;">📌 ꦕꦛꦼꦠ꧀ꦠꦤ꧀</span>
+        • <strong>نِئَ</strong> iku dudu nun sukun, dadi ora ana ikhfa’ utawa idzhar.<br>
+        • Mad Thabi’i ing <strong>شَا</strong> tetep dicantumake amarga dawa dhasar.<br>
+        • Akhir ayat (<strong>الْأَبْتَرُ</strong>) nek waqaf kena Mad ‘Aridh, boleh milih 2,4 utawa 6 harakat.<br>
+        • Tabel iki wis diatur kanggo tampilan HP (gampang digulung lan diwaca).
+    </div>
+
+    <hr>
+    <div class="footer-hp">
+        ⚘ Tugas BTQ & Jawa · M.Novandi A. ⚘
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Halaman - 5</title>
+  <style>
+    h1 {
+      background: deepskyblue;
+      border-radius: 10px;
+      font-size: 15px;
+      text-align: center;
+      padding: 10px;
+      width: 80vw;
+      transform: translateX(18px);
+      margin-bottom: 10px;
+    }
+    
+    .isi p {
+      margin: 0px 0;
+    }
+    
+    .n1 {
+      font-size: 15.8px;
+    }
+    
+    #message {
+    position: relative;
+    padding: 20px 40px 20px 20px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 10px;
+    display: none;
+    font-size: 18px;
+    text-align: center;
+    transform: translateY(-400px);
+    }
+    
+    #closeBtn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #ff4d4d;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>5. ILMU PENGETAHUAN ALAM</h1>
+  <div class="isi">
+    <p class="n1">1. menghitung besar usaha saat mengangkat tas</p>
+    <p>• rumus: = w = m.g.h</p>
+    <p>- jika massa tas (m) = 5kg</p>
+    <p>- percepatan gravitasi (g) = 10m/s²</p>
+    <p>- tinggi angkatan (h) = 0,5 meter</p>
+    <br>
+    <p>• jawaban: w = 5 x 10 x 0,5 = 25 joule</p>
+  </div>
+  
+  <p>2. Karena secara biologis otot tetap berkontraksi untuk menopang beban, meskipun secara Fisika usahanya nol (karena gaya angkat tegak lurus terhadap arah jaian)</p>
+  
+  <div class="isi1">
+    <p>B. Tugas cadi prambanan</p>
+    <p>1. bagian tubuh : kaki, karena menahan berat badan saat bergerak</p>
+    <p>2. naik tangga vs datar:</p>
+    <p>Maik tangga lebih melelahkan karena terjadi perpindahan vertikal yang harus melawan gaya gravitasi bumi</p>
+    <p>3. turun tangga: Tetap ada usaha, tapi otot bekerja menahon tubuh supaya tidak jatuh.</p>
+    <p>C. lava tour</p>
+    <p>1. Medan terberat: Medan yang paling membutuhkan usaha adalah jalan menanjak, karena kendaraan Pernu tenaga lebih besar untuk melawan gravitasi sekaligus melewati hambatan seperti pasir/batu</p>
+    <p>2. Jalan menurun: ya, kendaraan tetap melakukan usaha Saat melintas jalan menurun, karena rem dan sistem pengereman harus berkerja untuk menahan dan Mengatur kecepatan agar kendaraan tetap aman.</p>
+  </div>
+  
+  <div id="message">
+    <button onclick="NP1()">Next page</button>
+    <button id="closeBtn">X</button>
+  </div>
+  
+<script>
+  let tapCount = 0;
+  let tapTimeout;
+  
+  function NP1() {
+    window.location.href="1PS.html";
+  }
+  
+  document.body.addEventListener('click', (e) => {
+    if(e.target.id === 'closeBtn') return;
+    
+    tapCount++;
+    
+    clearTimeout(tapTimeout);
+    tapTimeout = setTimeout(() => {
+    tapCount = 0;
+  }, 1000);
+  
+  if (tapCount === 3) {
+    document.getElementById('message').style.display = 'block';
+    tapCount = 0;
+  }
+  });
+  
+  document.getElementById('closeBtn').addEventListener('click', () => {
+  document.getElementById('message').style.display = 'none';
+  });
+</script>
+</body>
+
+</html>

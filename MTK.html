@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Halaman - 4</title>
+  <style>
+    body {
+      text-align: center;
+    }
+    
+    h1 {
+      background: deepskyblue;
+      border-radius: 10px;
+      font-size: 15px;
+      text-align: center;
+      padding: 10px;
+      width: 80vw;
+      transform: translateX(18px);
+    }
+    
+    .t {
+      text-align: center;
+    }
+    
+    .Harga1 {
+      transform: translateX(61px) translateY(-80px);
+    }
+    
+    .Harga2 {
+      transform: translateX(61px) translateY(-90px);
+    }
+    
+    .i {
+      transform: translateY(-10px) translateX(-90px);
+    }
+    
+    .s {
+      transform: translateY(-20px) translateX(-90px);
+    }
+    
+    .jdl {
+      transform: translateX(-32px) translateY(-90px);
+    }
+    
+    .u {
+      transform: translateX(-18px) translateY(-90px);
+    }
+    
+    .u1 {
+      transform: translateX(-39px) translateY(-105px);
+    }
+    
+    .u2 {
+      transform: translateX(-70px) translateY(-120px);
+    }
+    
+    .u3 {
+      transform: translateX(-7px) translateY(-135px);
+    }
+    
+    .jdl2 {
+      transform: translateX(6px) translateY(-135px);
+    }
+    
+    .k {
+      transform: translateX(-31px) translateY(-135px);
+    }
+    
+    .k1 {
+      font-size: 8px;
+      transform: translateY(-171px) translateX(-10px);
+    }
+    
+    .k2 {
+      font-size: 8px;
+      transform: translateY(-178px) translateX(-10px);
+    }
+    
+    .k3 {
+      transform: translateX(-31px) translateY(-185px);
+    }
+    
+    .k4 {
+      font-size: 8px;
+      transform: translateY(-220px) translateX(-10px);
+    }
+    
+    .k5 {
+      font-size: 8px;
+      transform: translateY(-227px) translateX(-10px);
+    }
+    
+    .k6 {
+      transform: translateY(-235px) translateX(-17px);
+    }
+    
+    .k7 {
+      transform: translateY(-243px) translateX(16px);
+      font-size: 15px;
+    }
+    
+    #message {
+    position: relative;
+    padding: 20px 40px 20px 20px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 10px;
+    display: none;
+    font-size: 18px;
+    text-align: center;
+    transform: translateY(-250px);
+    }
+    
+    #closeBtn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #ff4d4d;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <h1>4. MATEMATIKA</h1>
+    <p>Nama barang/souvenir = kaos jogja</p>
+    <p class="i">Harga beli</p>
+    <p class="s">Harga jual</p>
+    <p class="Harga1">Rp = 20.000</p>
+    <p class="Harga2">Rp = 35.000</p>
+    <p class="jdl">A. menghitung keuntungan</p>
+    <p class="u">untung = harga jual - harga beli</p>
+    <p class="u1">untung = 35.000 - 20.000</p>
+    <p class="u2">untung = 15.000</p>
+    <p class="u3">jadi keuntungannya adalah 15.000</p>
+    <p class="jdl2">B. menghitung persentase keuntungan</p>
+    <p class="k">persentase = <span style="letter-spacing: -2px;">(————)</span> x 100%</p>
+    <p class="k1">untung</p>
+    <p class="k2">Harga beli</p>
+    <p class="k3">persentase = <span style="letter-spacing: -2px;">(————)</span> x 100%</p>
+    <p class="k4">15.000</p>
+    <p class="k5">20.000</p>
+    <p class="k6">persentase = 0,75 x 100% = 75%</p>
+    <p class="k7">Jadi, persentase keuntungannya adalah 75%</p>
+  </div>
+  
+  <div id="message">
+    <button onclick="NP1()">Next page</button>
+    <button id="closeBtn">X</button>
+  </div>
+  
+  <script>
+  let tapCount = 0;
+  let tapTimeout;
+  
+  function NP1() {
+    window.location.href="IPA.html";
+  }
+  
+  document.body.addEventListener('click', (e) => {
+    if(e.target.id === 'closeBtn') return;
+    
+    tapCount++;
+    
+    clearTimeout(tapTimeout);
+    tapTimeout = setTimeout(() => {
+    tapCount = 0;
+  }, 1000);
+  
+  if (tapCount === 3) {
+    document.getElementById('message').style.display = 'block';
+    tapCount = 0;
+  }
+  });
+  
+  document.getElementById('closeBtn').addEventListener('click', () => {
+  document.getElementById('message').style.display = 'none';
+  });
+</script>
+</body>
+
+</html>

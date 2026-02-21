@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Halaman - 6</title>
+  <style>
+    body {
+      text-align: center;
+      margin: 0px;
+      padding: 10px;
+    }
+    
+    h1 {
+      background: deepskyblue;
+      border-radius: 10px;
+      font-size: 15px;
+      text-align: center;
+      padding: 10px;
+      width: 80vw;
+      transform: translateX(18px);
+      margin-bottom: 10px;
+    }
+    
+    .KN {
+      font-size: 10px;
+    }
+    
+    .KN1 {
+      font-size: 10px;
+      margin-top: -5px;
+    }
+    
+    .KN2 {
+      font-size: 10px;
+      margin-top: -5px;
+      border-bottom: 2px solid gray;
+    }
+    
+    .CP {
+      font-size: 10px;
+    }
+    
+    .t2 p {
+      margin: 0px 0;
+    }
+    
+    .pe {
+      transform: translateX(-8px);
+    }
+    
+    #message {
+    position: relative;
+    padding: 20px 40px 20px 20px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 10px;
+    display: none;
+    font-size: 18px;
+    text-align: center;
+    transform: translateY(-400px);
+    }
+    
+    #closeBtn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #ff4d4d;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>6. ILMU PENGETAHUAN SOSIAL</h1>
+  <h3>KASONGAN</h3>
+  <p class="KN">Kasongan terkenal dengan kerajinan gerabahnya yang memiliki ciri khas desain tradisional dengan sentuhan modern. Setiap gerabah yang dihasilkan adalah hasil dari proses kreatif yang menggabungkan teknik tradisional dengan inovasi desain terkini. Kasongan terkenal dengan kerajinan gerabahnya yang memiliki ciri khas desain tradisional dengan sentuhan modern. Setiap gerabah yang dihasilkan adalah hasil dari proses kreatif yang menggabungkan teknik tradisional dengan inovasi desain terkini.</p>
+  <p class="KN1">Salah satu daya tarik utama Kasongan adalah workshop membuat gerabah yang terbuka untuk pengunjung.</p>
+  <p class="KN2">Di sini, wisatawan dapat belajar dan mencoba membuat gerabah mereka sendiri dengan bimbingan pengrajin lokal.</p>
+  <h3>CANDI PRAMBANAN</h3>
+  <p class="CP">1 Secara sejarah, pembangunan Candi Prambanan dimulai sekitar tahun 850 Masehi oleh Raja Rakai Pikatan dari Dinasti Sanjaya. Pembangunan ini didedikasikan untuk Trimurti, tiga dewa utama Hindu: Brahma, Wisnu, dan Siwa, dengan Siwa sebagai dewa utama. Pembangunannya dilanjutkan dan disempurnakan secara berkala oleh raja-raja berikutnya seperti Raja Lokapala dan Rakai Balitung Maha Sambu.</p>
+  <p class="CP">sisi lain, mitos yang paling terkenal di masyarakat sekitar adalah legenda Roro Jonggrang. Menurut cerita rakyat, Candi Prambanan dibangun dalam waktu semalam oleh Bandung Bondowoso dengan bantuan jin untuk memenuhi syarat dari Roro Jonggrang yang tidak ingin menikah dengannya. Roro Jonggrang kemudian menipu Bandung Bondowoso agar usahanya gagal, sehingga candi tersebut tidak selesai tepat waktu.</p>
+  <div class="t2">
+    <p>2. -pengelolaan pariwisata</p>
+    <p class="pe">-pemeliharaan fisik</p>
+    <p>-menjaga kebersihan</p>
+    <p>-penerapan teknologi</p>
+  </div>
+  
+  <div id="message">
+    <button onclick="NP1()">Next page</button>
+    <button id="closeBtn">X</button>
+  </div>
+  
+  <script>
+  let tapCount = 0;
+  let tapTimeout;
+  
+  function NP1() {
+    window.location.href="BIng.html";
+  }
+  
+  document.body.addEventListener('click', (e) => {
+    if(e.target.id === 'closeBtn') return;
+    
+    tapCount++;
+    
+    clearTimeout(tapTimeout);
+    tapTimeout = setTimeout(() => {
+    tapCount = 0;
+  }, 1000);
+  
+  if (tapCount === 3) {
+    document.getElementById('message').style.display = 'block';
+    tapCount = 0;
+  }
+  });
+  
+  document.getElementById('closeBtn').addEventListener('click', () => {
+  document.getElementById('message').style.display = 'none';
+  });
+</script>
+</body>
+
+</html>

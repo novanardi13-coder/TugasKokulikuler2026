@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Halaman - 12</title>
+  <style>
+    body {
+      height: 95vh;
+      text-align: center;
+    }
+    
+    #message {
+      position: relative;
+      padding: 20px 40px 20px 20px;
+      background-color: #fff;
+      border: 2px solid #333;
+      border-radius: 10px;
+      display: none;
+      font-size: 18px;
+      text-align: center;
+    }
+    
+    #closeBtn {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background: #ff4d4d;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 50%;
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+    }
+    
+    h1 {
+      background: deepskyblue;
+      border-radius: 10px;
+      font-size: 14px;
+      text-align: center;
+      padding: 10px;
+      width: 80vw;
+      transform: translateX(18px);
+      margin-bottom: 10px;
+    }
+    
+    p {
+      margin: 0px 0;
+      text-align: left;
+    }
+    
+    h5 {
+      transform: translateY(-28px);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>12. BACA TULIS AL-QUR'AN</h1>
+  <h3>إِنَّ شَانِئَكَ هُوَ الْأَبْتَرُ</h3>
+  <h5>"Sungguh, orang-orang yang membencimu dialah yang terputus (dari rahmat Allah)."</h5>
+  <h5><p>1. إِنَّ </p><p>· Hukum: Ghunnah Musyaddah</p><p>· Penjelasan: Nun bertasydid (نّ), dibaca dengung 2 harakat</p>
+  <br>
+  <p>2. شَا</p>
+  <p>· Hukum: Mad Thabi'i</p>
+  <p>· Penjelasan: Fathah diikuti alif, dibaca panjang 2 harakat</p>
+  <br>
+  <p>3. نِئَ</p>
+  <p>· Hukum: -</p>
+  <p>· Penjelasan: Nun kasrah bertemu hamzah, bukan nun sukun, jadi dibaca biasa tanpa dengung</p>
+  <br>
+  <p>4. الْأَ</p>
+  <p>· Hukum: Alif Lam Qamariyah</p>
+  <p>· Penjelasan: Lam ta'rif (ال) bertemu hamzah (أ), lam dibaca jelas (tidak dengung)</p>
+  <br>
+  <p>5. بْتَ</p>
+  <p>· Hukum: Qalqalah Sugra</p>
+  <p>· Penjelasan: Ba' sukun (بْ) di tengah kalimat, dibaca memantul ringan</p>
+  <br>
+  <p>6. رُ</p>
+  <p>· Hukum: Mad 'Aridh Lissukun</p>
+  <p>· Penjelasan: Jika berhenti di akhir ayat, huruf ra' dibaca panjang 2, 4, atau 6 harakat</p>
+  <br>
+  <p>Kesan: Allah membela nabi dari hinaan dan ejekan</p>
+  <p>Pelajaran: Jangan mudah sedih dari hinaan/ejekan orang</p></h5>
+  <div id="message">
+    <button onclick="NP1()">Next page</button>
+    <button id="closeBtn">X</button>
+  </div>
+  
+  <script>
+    let tapCount = 0;
+    let tapTimeout;
+    
+    function NP1() {
+      window.location.href = "index.html";
+    }
+    
+    document.body.addEventListener('click', (e) => {
+      if (e.target.id === 'closeBtn') return;
+      
+      tapCount++;
+      
+      clearTimeout(tapTimeout);
+      tapTimeout = setTimeout(() => {
+        tapCount = 0;
+      }, 1000);
+      
+      if (tapCount === 3) {
+        document.getElementById('message').style.display = 'block';
+        tapCount = 0;
+      }
+    });
+    
+    document.getElementById('closeBtn').addEventListener('click', () => {
+      document.getElementById('message').style.display = 'none';
+    });
+  </script>
+</body>
+
+</html>

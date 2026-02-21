@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Halaman - 11</title>
+  <style>
+    body {
+      height: 95vh;
+      text-align: center;
+    }
+    
+    #message {
+      position: relative;
+      padding: 20px 40px 20px 20px;
+      background-color: #fff;
+      border: 2px solid #333;
+      border-radius: 10px;
+      display: none;
+      font-size: 18px;
+      text-align: center;
+      transform: translateY(-500px);
+    }
+    
+    #closeBtn {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background: #ff4d4d;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 50%;
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+    }
+    
+    h1 {
+      background: deepskyblue;
+      border-radius: 10px;
+      font-size: 14px;
+      text-align: center;
+      padding: 10px;
+      width: 80vw;
+      transform: translateX(18px);
+      margin-bottom: 10px;
+    }
+    
+    p {
+      font-size: 13px;
+      margin: 5px 0;
+      transform: translateY(-10px);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>11. BAHASA JAWA</h1>
+  
+  <h3>NYENENGI ING KUTHO JOGJA</h3>
+  
+  <h4>Dening: M.Novandi A.</h4>
+  
+  <p>Aku lan kanca-kanca sakelas melu kegiatan kokulikuler study tour menyang Yogyakarta. Budhal saka sekolah jam 2 bengi numpak bis pariwisata. Atiku seneng banget amarga iki pengalaman pertamaku menyang kutho budaya. Perjalanan kurang luwih 7 jam, lan tekane Jogja awan.
+  </p>
+  <p>Tekan Jogja, awake dhewe langsung menyang Candi Prambanan. Aku kagum karo gedunge candi sing megah. Sakwise iku, rombongan nerusake menyang Kasongan, desa pengrajin gerabah.
+  </p>
+  <p>Sorene, awake dhewe mampir Ibarbo Park. Panggonane seru lan akeh permainan. Aku lan kanca-kanca mlaku-mlaku nganti sore. Bareng wis magrib, rombongan menyang hotel kanggo nginep. Aku sakamar karo Ferdi, Ilham, lan Wisnu.
+</p>
+<p>Naliku bengi, aku wis turu,ning jam 2 esuk aku melek lan ora kepenak. Aku banjur mbukak jendhela lan nyawang swasana njaba. Kanca-kancaku liyane padha turu nyenyak.
+</p>
+<p>Esuke jam 7, awake dhewe budhal menyang Museum Sonobudoyo. Ing kono aku weruh maneka warna koleksi budaya Jawa, wayang kulit, lan gamelan.
+</p>
+<p>Nalika ana ing njero bis, wetengku krasa mual. Mriyang kaya arep muntah. Aku peksa nahan nganti ing museum, amarga isin yen muntah ing museum. Aku ngempet kenceng-kenceng, nganti metu kringet dingin. Alhamdulillah, aku isa nahan nganti metu saka museum.
+</p>
+<p>Bareng mlebu bis, ombak-ombak dalan nggawe aku ora kuat maneh. Dadakan aku muntah ing njero bis. Kanca sing lungguh ing pinggirku kaget lan nulungi aku. Sakwise muntah, aku ngombe obat muntah.
+</p>
+<p>Sakwise ngombe obat, aku krasa luwih apik. Awake dhewe nerusake perjalanan menyang Malioboro lan Lava Tour Merapi. Senajan awak isih krasa lemes, aku tetep seneng bisa ndelok langsung keindahan Gunung Merapi.
+</p>
+<p>Tekanku omah jam 1 bengi. Kesel banget, tapi atiku seneng merga bisa dolan lan sinau budaya Jawa ing Yogyakarta. Pengalaman iki, utamane nalika jam 2 esuk ora bisa turu lan kedadean muntah ing bis, bakal tak eling-eling saklawase.</p>
+  
+  <div id="message">
+    <button onclick="NP1()">Next page</button>
+    <button id="closeBtn">X</button>
+  </div>
+  
+  <script>
+    let tapCount = 0;
+    let tapTimeout;
+    
+    function NP1() {
+      window.location.href = "BTQ.html";
+    }
+    
+    document.body.addEventListener('click', (e) => {
+      if (e.target.id === 'closeBtn') return;
+      
+      tapCount++;
+      
+      clearTimeout(tapTimeout);
+      tapTimeout = setTimeout(() => {
+        tapCount = 0;
+      }, 1000);
+      
+      if (tapCount === 3) {
+        document.getElementById('message').style.display = 'block';
+        tapCount = 0;
+      }
+    });
+    
+    document.getElementById('closeBtn').addEventListener('click', () => {
+      document.getElementById('message').style.display = 'none';
+    });
+  </script>
+</body>
+
+</html>

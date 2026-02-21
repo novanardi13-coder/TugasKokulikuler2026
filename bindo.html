@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Halaman - 3</title>
+  <style>
+    body {
+      text-align: center;
+      margin: 0;
+      padding: 10px;
+    }
+    
+    h1 {
+      background: deepskyblue;
+      border-radius: 10px;
+      font-size: 15px;
+      text-align: center;
+      padding: 10px;
+      width: 80vw;
+      transform: translateX(18px);
+      margin-bottom: 10px;
+    }
+    
+    p {
+      margin: 5px 0;
+      line-height: 1.2;
+    }
+    
+    .p3 {
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+    
+    .ih {
+      transform: translateY(-5px);
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    
+    .ih1 {
+      transform: translateY(-5px);
+      border-bottom: 2px solid gray;
+      margin-top: 0;
+      margin-bottom: 5px;
+      padding-bottom: 3px;
+    }
+    
+    .G1 p {
+      margin: 0px 0;
+    }
+    
+    .G1 {
+      margin-bottom: 5px;
+      text-align: left;
+    }
+    
+    .G2 p {
+      margin: 0px 0;
+    }
+    
+    .G2 {
+      text-align: left;
+      margin-top: 10px;
+    }
+    
+    .G3 p {
+      margin: 0px 0;
+    }
+    
+    .G3 {
+      text-align: left;
+      margin-top: 10px;
+      border-bottom: 3px solid gray;
+    }
+    
+    #message {
+    position: relative;
+    padding: 20px 40px 20px 20px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 10px;
+    display: none;
+    font-size: 18px;
+    text-align: center;
+    }
+    
+    #closeBtn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #ff4d4d;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>3. BAHASA INDONESIA</h1>
+  <p>1.Objek: Malioboro</p>
+  <p>2.Hal yang menarik:</p>
+  <p>• Keramaian pedagang dan wisatawan. Jalan malioboro selalu dipenuhi orang yang berbelanja dan berjalan santai.</p>
+  <p class="ih">• Suasana jalan Terlihat ramai dengan berbagai toko dan dagangan yang beraneka ragam.</p>
+  <p class="ih1">• Batik dan jajanan khas. Dijual sepanjang jalan dan menjadi daya tarik bagi Para Pengunjung.</p>
+  <p class="p3">Puisi (3 bait)</p>
+  
+  <div class="G1">
+    <p>Siang di malioboro</p>
+    <p>Hari mulai terasa Panas</p>
+    <p>Sinar matahari menyinari kota</p>
+    <p>aku berjalan di tengah keramaian</p>
+  </div>
+  
+  <div class="G2">
+    <p>Melihat malioboro yang penuh warna</p>
+    <p>Para pedagang menawarkan dengan ramah</p>
+    <p>Batik dan jajanan tersusun rapi</p>
+    <p>Suara kendaraan bersahutan</p>
+    <p>Menjadi Irama khas jalanan ini</p>
+  </div>
+  
+  <div class="G3">
+    <p>di bawah langit yang biru terang</p>
+    <p>kota ini tetap terasa ramah</p>
+    <p>alioboro bukan sekedar jalan</p>
+    <p>melainkan sakti cerita di setiap langkah</p>
+  </div>
+  
+  <div id="message">
+    <button onclick="NP1()">Next page</button>
+    <button id="closeBtn">X</button>
+  </div>
+  
+<script>
+  let tapCount = 0;
+  let tapTimeout;
+  
+  function NP1() {
+    window.location.href="MTK.html";
+  }
+  
+  document.body.addEventListener('click', (e) => {
+    if(e.target.id === 'closeBtn') return;
+    
+    tapCount++;
+    
+    clearTimeout(tapTimeout);
+    tapTimeout = setTimeout(() => {
+    tapCount = 0;
+  }, 1000);
+  
+  if (tapCount === 3) {
+    document.getElementById('message').style.display = 'block';
+    tapCount = 0;
+  }
+  });
+  
+  document.getElementById('closeBtn').addEventListener('click', () => {
+  document.getElementById('message').style.display = 'none';
+  });
+</script>
+</body>
+
+</html>
